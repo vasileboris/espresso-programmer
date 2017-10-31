@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>
-        <?php wp_title(''); ?>
-    </title>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>
+        <?php wp_title( '-', true, 'right' ); ?>
+    </title>
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php wp_head(); ?>
 </head>
 <body>
-<!-- Start blog display -->
 <div>
-    <!-- Header -->
-    <div>
-        <header role='banner'>
-            <a href="<?php echo home_url(); ?>"></a>
-            <h1>
-                <a href="<?php echo home_url(); ?>">
-                    <?php bloginfo('name'); ?>
-                </a>
-            </h1>
-            <p>
-                <a href="<?php echo home_url(); ?>">
-                    <?php bloginfo('description'); ?>
-                </a>
-            </p>
-        </header>
-    </div>
+    <header role='banner'>
+        <div>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( bloginfo( 'name' ) ); ?>" rel="home">
+                <img src="<?php echo esc_url( get_header_image() ); ?>"
+                     height="<?php echo absint( get_custom_header()->height ); ?>"
+                     width="<?php echo absint( get_custom_header()->width ); ?>"
+                     alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>" />
+            </a>
+        </div>
+        <div>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <?php bloginfo( 'name' ); ?>
+            </a>
+        </div>
+        <div><?php bloginfo( 'description' ); ?></div>
+    </header>
 
-    <!-- Posts Area -->
-    <main>
+    <div role="main">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article role="article" itemscope itemtype="http://schema.org/Article">
                 <h1>
@@ -52,16 +50,12 @@
         <div>
             <?php posts_nav_link(); ?>
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <!-- TODO Use PHP to display credits dynamically -->
         Espresso Programmer empowered by WordPress
     </footer>
 </div>
-
-<!-- End blog display -->
 
 <?php wp_footer(); ?>
 </body>
