@@ -28,28 +28,36 @@
         <div><?php bloginfo( 'description' ); ?></div>
     </header>
 
-    <div role="main">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <article role="article" itemscope itemtype="http://schema.org/Article">
-                <header>
-                    <h1>
-                        <a href="<?php the_permalink() ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </h1>
-                    <time datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
-                        <?php the_time('F j, Y'); ?>
-                    </time>
-                </header>
-                <div itemprop="articleBody">
-                    <?php the_content('Read More &raquo;'); ?>
-                </div>
-            </article>
-        <?php endwhile; endif; ?>
+    <div>
+        <div role="main">
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <article role="article" itemscope itemtype="http://schema.org/Article">
+                    <header>
+                        <h1>
+                            <a href="<?php the_permalink() ?>">
+                                <?php the_title(); ?>
+                            </a>
+                        </h1>
+                        <time datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
+                            <?php the_time('F j, Y'); ?>
+                        </time>
+                    </header>
+                    <div itemprop="articleBody">
+                        <?php the_content('Read More &raquo;'); ?>
+                    </div>
+                </article>
+            <?php endwhile; endif; ?>
 
-        <div>
-            <?php posts_nav_link(); ?>
+            <div>
+                <?php posts_nav_link(); ?>
+            </div>
         </div>
+
+        <?php if ( is_active_sidebar( 'espresso_programmer_right' ) ) : ?>
+            <div id="right-sidebar" role="complementary">
+                <?php dynamic_sidebar( 'espresso_programmer_right' ); ?>
+            </div>
+        <?php endif; ?>
     </div>
 
     <footer>
