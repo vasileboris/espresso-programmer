@@ -29,19 +29,19 @@
     </header>
 
     <div role="main">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <article role="article" itemscope itemtype="http://schema.org/Article">
-                <h1>
-                    <a href="<?php the_permalink() ?>">
-                        <?php the_title(); ?>
-                    </a>
-                </h1>
-                <div>
+                <header>
+                    <h1>
+                        <a href="<?php the_permalink() ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h1>
                     <time datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
-                        <?php the_time(__('F j, Y')); ?>
+                        <?php the_time('F j, Y'); ?>
                     </time>
-                </div>
-                <div itemprop="articleBody" data-type-cleanup="true">
+                </header>
+                <div itemprop="articleBody">
                     <?php the_content('Read More &raquo;'); ?>
                 </div>
             </article>
@@ -53,7 +53,7 @@
     </div>
 
     <footer>
-        Espresso Programmer empowered by WordPress
+        <?php echo espresso_programmer_footer_credits(); ?>
     </footer>
 </div>
 
