@@ -44,13 +44,19 @@
                 <article role="article" itemscope itemtype="http://schema.org/Article">
                     <header>
                         <h1>
-                            <a href="<?php the_permalink() ?>">
+                            <?php if ( is_single() || is_page() ) : ?>
                                 <?php the_title(); ?>
-                            </a>
+                            <?php else : ?>
+                                <a href="<?php the_permalink() ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            <?php endif; ?>
                         </h1>
-                        <time datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
-                            <?php the_time('F j, Y'); ?>
-                        </time>
+                        <?php if ( !is_page() ) : ?>
+                            <time datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
+                                <?php the_time('F j, Y'); ?>
+                            </time>
+                        <?php endif; ?>
                     </header>
                     <div itemprop="articleBody">
                         <?php the_content('Read More &raquo;'); ?>
