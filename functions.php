@@ -32,6 +32,27 @@ function espresso_programmer_custom_header_setup() {
 add_action( 'after_setup_theme', 'espresso_programmer_custom_header_setup' );
 
 /**
+ * Enable custom primary menu
+ */
+function espresso_programmer_navigation_setup() {
+    register_nav_menus(
+        array(
+            'primary' => 'Primary menu'
+        )
+    );
+
+}
+add_action( 'after_setup_theme', 'espresso_programmer_navigation_setup' );
+
+/**
+ * @return Menu item css classes
+ */
+function espresso_programmer_primary_menu_item_classes() {
+    return ['menu-item'];
+}
+add_filter( 'nav_menu_css_class', 'espresso_programmer_primary_menu_item_classes', 10, 0);
+
+/**
  * Register our sidebars and widgetized areas.
  *
  */
@@ -42,7 +63,7 @@ function espresso_programmer_widgets_init() {
         'id'            => 'espresso_programmer_right',
         'before_widget' => '<div>',
         'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="rounded">',
+        'before_title'  => '<h2>',
         'after_title'   => '</h2>',
     ) );
 
