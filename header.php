@@ -24,6 +24,3 @@
             'depth' => 1
         )); ?>
 </header>
-
-<!-- main content div -->
-<div>

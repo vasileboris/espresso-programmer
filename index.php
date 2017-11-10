@@ -13,39 +13,19 @@
     <div>
         <?php get_header(); ?>
 
-        <div role="main">
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <article role="article" itemscope itemtype="http://schema.org/Article">
-                    <header>
-                        <h1>
-                            <?php if ( is_single() || is_page() ) : ?>
-                                <?php the_title(); ?>
-                            <?php else : ?>
-                                <a href="<?php the_permalink() ?>">
-                                    <?php the_title(); ?>
-                                </a>
-                            <?php endif; ?>
-                        </h1>
-                        <?php if ( !is_page() ) : ?>
-                            <time datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
-                                <?php the_time('F j, Y'); ?>
-                            </time>
-                        <?php endif; ?>
-                    </header>
-                    <div itemprop="articleBody">
-                        <?php the_content(); ?>
-                    </div>
-                </article>
-            <?php endwhile; endif; ?>
+        <div>
+            <div role="main">
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php get_template_part('content'); ?>
+                <?php endwhile; endif; ?>
 
-            <?php get_template_part('navigation'); ?>
+                <?php get_template_part('navigation'); ?>
+            </div>
 
-            <?php comments_template(); ?>
+            <?php get_sidebar(); ?>
         </div>
 
-        <?php get_sidebar(); ?>
+        <?php get_footer(); ?>
     </div>
-
-    <?php get_footer(); ?>
 </body>
 </html>
