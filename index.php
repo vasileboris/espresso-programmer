@@ -39,6 +39,8 @@
             <?php endwhile; endif; ?>
 
             <?php get_template_part('navigation'); ?>
+
+            <?php comments_template(); ?>
         </div>
 
         <?php get_sidebar(); ?>
