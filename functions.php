@@ -74,7 +74,7 @@ add_action( 'widgets_init', 'espresso_programmer_widgets_init' );
  * @return Current theme and WordPress credit links
  */
 function espresso_programmer_footer_credits() {
-    return sprintf( '%1$s empowered by %2$s', espresso_programmer_link(), word_press_link());
+    return sprintf( '%1$s empowered by %2$s', espresso_programmer_link(), espresso_programmer_word_press_link());
 }
 
 /**
@@ -90,10 +90,10 @@ function espresso_programmer_link() {
 /**
  * @return WordPress credit link
  */
-function word_press_link() {
+function espresso_programmer_word_press_link() {
     return sprintf('<a href="%1$s" rel="generator" title="%2$s">%3$s</a>',
         'http://wordpress.org/',
-        'WordPress: A free open-source publishing platform',
+        'WordPress is open source software you can use to create a beautiful website, blog, or app.',
         'WordPress');
 }
 
