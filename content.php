@@ -20,6 +20,7 @@
     </div>
 </article>
 
+<?php get_template_part('navigation', 'single'); ?>
+
 <?php comments_template(); ?>
 
-<?php get_template_part('navigation', 'single'); ?>
