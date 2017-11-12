@@ -7,12 +7,14 @@
                  alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>"
                  class="blog-logo" />
         </a>
-        <div class="blog-name">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <?php bloginfo( 'name' ); ?>
-            </a>
+        <div class="blog-info">
+            <div class="blog-name">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
+            </div>
+            <div class="blog-description"><?php bloginfo( 'description' ); ?></div>
         </div>
-        <div class="blog-description"><?php bloginfo( 'description' ); ?></div>
     </div>
     <?php wp_nav_menu(
         array(

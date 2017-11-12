@@ -61,7 +61,7 @@ a:link, a:visited {
 }
 
 .blog-home {
-    float: left;
+    float: right;
     margin: 5px 5px 0 0;
 }
 
@@ -72,6 +72,12 @@ a:link, a:visited {
 .blog-logo {
     width: 100px;
     height: 100px;
+}
+
+.blog-info {
+    max-width: 220px;
+    float: right;
+    text-align: right;
 }
 
 .blog-name {
@@ -85,11 +91,29 @@ a:link, a:visited {
     margin-top: 5px;
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 1000px) {
     .header, .posts, .sidebar {
         max-width: 940px;
         margin-left: auto;
         margin-right: auto;
         float: none;
+    }
+
+    .blog-home {
+        float: left;
+    }
+
+    .blog-info {
+        float: left;
+        max-width: 600px;
+        margin-top: 26px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .blog-info {
+        max-width: 200px;
+        margin-top: 0;
     }
 }
