@@ -10,22 +10,20 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <div>
+    <div class="page">
         <?php get_header(); ?>
 
-        <div>
-            <div role="main">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_part('content'); ?>
-                <?php endwhile; endif; ?>
+        <div class="posts" role="main">
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <?php get_template_part('content'); ?>
+            <?php endwhile; endif; ?>
 
-                <?php get_template_part('navigation'); ?>
-            </div>
-
-            <?php get_sidebar(); ?>
+            <?php get_template_part('navigation'); ?>
         </div>
 
-        <?php get_footer(); ?>
+        <?php get_sidebar(); ?>
+
     </div>
+    <?php get_footer(); ?>
 </body>
 </html>
