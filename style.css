@@ -91,6 +91,12 @@ a:link, a:visited {
     margin-top: 5px;
 }
 
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+}
+
 @media only screen and (max-width: 1000px) {
     .header, .posts, .sidebar {
         max-width: 940px;
@@ -109,6 +115,11 @@ a:link, a:visited {
         margin-top: 26px;
         text-align: left;
     }
+
+    .menu-items {
+        text-align: left;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
