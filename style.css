@@ -33,6 +33,10 @@ a:link, a:visited {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .page, .footer {
     max-width: 960px;
     margin-left: auto;
