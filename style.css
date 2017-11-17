@@ -177,6 +177,22 @@ a:hover {
     margin: 0;
 }
 
+.posts-navigation {
+    overflow: auto;
+}
+
+.posts-navigation-left {
+    text-align: left;
+    float: left;
+    width: 50%;
+}
+
+.posts-navigation-right {
+    text-align: right;
+    float: right;
+    width: 50%;
+}
+
 @media only screen and (max-width: 991px) {
     :root {
         --max-page-width: 940px;
