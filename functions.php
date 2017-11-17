@@ -4,7 +4,8 @@
  * Enable css stylesheet
  */
 function espresso_programmer_stylesheet() {
-    wp_enqueue_style( 'espresso-programmer-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'espresso-programmer-style', get_stylesheet_uri(), array( 'normalize' ) );
+    wp_enqueue_style( 'normalize', get_stylesheet_directory_uri() . '/normalize.css' );
 }
 add_action( 'wp_enqueue_scripts', 'espresso_programmer_stylesheet' );
 
