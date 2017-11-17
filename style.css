@@ -20,6 +20,7 @@ Text Domain: espresso-programmer
     --max-blog-info-width: var(--max-sidebar-width);
     --grid-elements-margin: 10px;
     --elements-margin: 5px;
+    --elements-padding: 5px;
     --border-color: #f5f5f5;
     --logo-size: 100px;
     --h1-size: 24px;
@@ -107,6 +108,10 @@ a:hover {
     margin-top: var(--elements-margin);
 }
 
+.menu {
+    margin: var(--elements-margin) 0;
+}
+
 .menu-items {
     list-style-type: none;
     padding: 0;
@@ -119,12 +124,56 @@ a:hover {
 
 .search-text {
     width: 100%;
-    padding: var(--elements-margin);
-    border: 1px solid var(--border-color);
+    padding: var(--elements-padding);
+    border: none;
 }
 
 .search-text:focus {
     outline: none;
+}
+
+.widget.widget_top-posts,
+.widget.widget_categories,
+.widget.widget_tag_cloud,
+.widget.widget_search {
+    border: 4px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.widget {
+    margin: var(--elements-margin) 0;
+    padding: var(--elements-padding);
+}
+
+.widget-title {
+    text-transform: lowercase;
+    text-align: right;
+    margin: 0;
+}
+
+.menu ul, .menu ol,
+.widget ul, .widget ol {
+    margin: var(--elements-margin) 0;
+    padding: 0;
+}
+
+.widget li {
+    list-style-type: none;
+    text-align: right;
+    padding: var(--elements-padding) 0;
+}
+
+.tagcloud {
+    text-align: right;
+    margin-top: var(--elements-margin);
+}
+
+.textwidget {
+    text-align: right;
+}
+
+.textwidget p {
+    margin: 0;
 }
 
 @media only screen and (max-width: 991px) {
@@ -160,10 +209,13 @@ a:hover {
         text-align: left;
     }
 
-    .menu-items {
+    .menu-items,
+    .widget-title,
+    .tagcloud,
+    .textwidget,
+    .widget li {
         text-align: left;
     }
-
 }
 
 @media only screen and (max-width: 480px) {
