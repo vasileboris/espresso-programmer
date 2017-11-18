@@ -30,7 +30,9 @@ Text Domain: espresso-programmer
     --h2-size: calc(1.5 * var(--font-size));
     --h1-size: calc(2 * var(--font-size));
     --light-grey: #f5f5f5;
-    --widget-border: 4px solid var(--light-grey);
+    --grey: #999999;
+    --border: 4px solid var(--light-grey);
+    --light-border: 2px solid var(--light-grey);
     --border-radius: 5px;
 }
 
@@ -175,7 +177,7 @@ a:hover {
 .widget.widget_categories,
 .widget.widget_tag_cloud,
 .widget.widget_search {
-    border: var(--widget-border);
+    border: var(--border);
     border-radius: var(--border-radius);
 }
 
@@ -215,26 +217,63 @@ a:hover {
     margin: 0;
 }
 
-.posts-navigation-left, .posts-navigation-right {
+.posts-navigation-left, .posts-navigation-right,
+.comments-navigation-left, .comments-navigation-right {
+    text-transform: lowercase;
     width: 50%;
     margin-bottom: var(--grid-elements-margin);
 }
 
-.posts-navigation-left {
+.posts-navigation-left, .comments-navigation-left {
     text-align: left;
     float: left;
 }
 
-.posts-navigation-right {
+.posts-navigation-right, .comments-navigation-right {
     text-align: right;
     float: right;
 }
 
 .post-time {
-    font-style: italic;
+    color: var(--grey);
 }
 
-.post-comments {
+.comments {
+    clear: both;
+}
+
+.comments-title {
+    margin-top: var(--elements-margin);
+    text-align: right;
+    color: var(--grey);
+    border-bottom: var(--border);
+}
+
+.comment {
+    list-style-type: none;
+    margin: var(--elements-margin) 0;
+    padding: var(--elements-padding) 0;
+    border-bottom: var(--light-border);
+}
+
+.comment-author {
+    float: left;
+}
+
+.comment-meta {
+    text-align: right;
+}
+
+.comment p {
+    clear: both;
+    padding: var(--elements-padding);
+}
+
+.says {
+    display: none;
+}
+
+.comment-respond {
     clear: both;
 }
 

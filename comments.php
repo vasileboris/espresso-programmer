@@ -3,24 +3,23 @@ if ( post_password_required() )
     return;
 ?>
 
-<div class="post-comments">
+<section class="comments">
+    <?php comment_form(); ?>
+
     <?php if ( have_comments() ) : ?>
-        <h2>
+        <header class="comments-title" role="banner">
             <?php
-            printf( _n( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'espresso-programmer' ),
-                number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+            printf( _n( '1 reply', '%1$s replies', get_comments_number(), 'espresso-programmer' ), number_format_i18n( get_comments_number() ) );
             ?>
-        </h2>
+        </header>
 
         <ul>
-            <?php wp_list_comments( array( 'type' => 'comment', 'reverse_top_level' => tue ) ); ?>
+            <?php wp_list_comments( array( 'type' => 'comment', 'style' => 'ul' ) ); ?>
         </ul>
-
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-            <nav role="navigation">
-                <h1><?php _e( 'Comment navigation', 'espresso-programmer' ); ?></h1>
-                <div><?php previous_comments_link( __( '&larr; Older Comments', 'espresso-programmer' ) ); ?></div>
-                <div><?php next_comments_link( __( 'Newer Comments &rarr;', 'espresso-programmer' ) ); ?></div>
+            <nav role="navigation" class="comments-navigation">
+                <div class="comments-navigation-left"><?php next_comments_link( __( 'Newer Comments', 'espresso-programmer' ) ); ?></div>
+                <div class="comments-navigation-right"><?php previous_comments_link( __( 'Older Comments', 'espresso-programmer' ) ); ?></div>
             </nav>
         <?php endif; ?>
 
@@ -29,7 +28,4 @@ if ( post_password_required() )
         <?php endif; ?>
 
     <?php endif; ?>
-
-    <?php comment_form(); ?>
-
-</div>
+</section>

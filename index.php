@@ -13,17 +13,17 @@
     <div class="page">
         <?php get_header(); ?>
 
-        <div class="posts" role="main">
+        <section class="posts" role="main">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part('content'); ?>
             <?php endwhile; endif; ?>
 
             <?php get_template_part('navigation'); ?>
-        </div>
+        </section>
 
         <?php get_sidebar(); ?>
 
+        <?php get_footer(); ?>
     </div>
-    <?php get_footer(); ?>
 </body>
 </html>
