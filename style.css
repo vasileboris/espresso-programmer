@@ -238,6 +238,10 @@ a:hover {
     color: var(--grey);
 }
 
+.post-content img {
+    max-width: 100%;
+}
+
 .comments {
     clear: both;
 }
@@ -297,13 +301,6 @@ a:hover {
         clear: both;
     }
 
-    .posts {
-        max-width: var(--max-content-width);
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-    }
-
     .blog-home {
         float: left;
     }
@@ -313,6 +310,13 @@ a:hover {
         max-width: calc(var(--max-blog-info-width) - var(--logo-size));
         margin-top: calc(var(--logo-size) / 2 - var(--h1-size));
         text-align: left;
+    }
+
+    .posts {
+        max-width: var(--max-content-width);
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
     }
 
     .menu-items,

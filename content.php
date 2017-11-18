@@ -1,5 +1,5 @@
-<article role="article" itemscope itemtype="http://schema.org/Article">
-    <header>
+<article role="article" itemscope itemtype="http://schema.org/Article" class="post">
+    <header class="post-info">
         <h1>
             <?php if ( is_single() || is_page() ) : ?>
                 <?php the_title(); ?>
@@ -15,7 +15,7 @@
             </time>
         <?php endif; ?>
     </header>
-    <div itemprop="articleBody">
+    <div itemprop="articleBody" class="post-content">
         <?php the_content(); ?>
     </div>
 </article>
