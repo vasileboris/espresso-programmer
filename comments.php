@@ -3,7 +3,7 @@ if ( post_password_required() )
     return;
 ?>
 
-<div>
+<div class="post-comments">
     <?php if ( have_comments() ) : ?>
         <h2>
             <?php

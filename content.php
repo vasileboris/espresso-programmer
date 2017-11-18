@@ -10,7 +10,7 @@
             <?php endif; ?>
         </h1>
         <?php if ( !is_page() ) : ?>
-            <time datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
+            <time datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished" class="post-time">
                 <?php the_time('F j, Y'); ?>
             </time>
         <?php endif; ?>
