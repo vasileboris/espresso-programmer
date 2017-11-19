@@ -17,7 +17,7 @@ Text Domain: espresso-programmer
     --max-page-width: 960px;
     --max-content-width: 700px;
     --max-sidebar-width: 220px;
-    --max-blog-info-width: var(--max-sidebar-width);
+    --max-blog-info-width: var(--max-page-width);
     --grid-elements-margin: 10px;
     --elements-margin: 5px;
     --elements-padding: 5px;
@@ -102,10 +102,9 @@ a:hover {
     clear: both;
 }
 
-.header, .sidebar {
-    max-width: var(--max-sidebar-width);
+.header {
+    max-width: var(--max-page-width);
     margin: var(--grid-elements-margin);
-    float: left;
 }
 
 .posts {
@@ -115,12 +114,25 @@ a:hover {
     float: right;
 }
 
+.sidebar-menu {
+    max-width: var(--max-sidebar-width);
+    margin: var(--grid-elements-margin);
+    clear: both;
+    float: left;
+}
+
+.sidebar {
+    max-width: var(--max-sidebar-width);
+    margin: var(--grid-elements-margin);
+    float: left;
+}
+
 .blog-header {
 }
 
 .blog-home {
     margin: var(--elements-margin) var(--elements-margin) 0 0;
-    float: right;
+    float: left;
 }
 
 .blog-name a:link, .blog-name a:visited {
@@ -134,8 +146,9 @@ a:hover {
 
 .blog-info {
     max-width: var(--max-blog-info-width);
-    text-align: right;
-    float: right;
+    margin-top: calc(var(--logo-size) / 2 - var(--h1-size));
+    text-align: left;
+    float: left;
 }
 
 .blog-name {
@@ -158,6 +171,10 @@ a:hover {
     list-style-type: none;
     padding: 0;
     text-align: right;
+}
+
+.menu-item {
+    margin: var(--elements-margin) 0;
 }
 
 .search-label, .search-submit {
@@ -183,7 +200,7 @@ a:hover {
     border-radius: var(--border-radius);
 }
 
-.widget {
+.widget, .posts-search {
     margin: var(--elements-margin) 0;
     padding: var(--elements-padding);
 }
@@ -243,6 +260,7 @@ a:hover {
 
 .post-time {
     color: var(--grey);
+    margin: var(--elements-margin) 0;
 }
 
 .post-content img {
@@ -300,12 +318,13 @@ a:hover {
         padding: 0 var(--elements-padding) 0 var(--elements-padding);
     }
 
-    .header, .sidebar {
-        max-width: var(--max-sidebar-width);
+    .header {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .blog-header {
         float: none;
-        clear: both;
     }
 
     .blog-home {
@@ -315,7 +334,14 @@ a:hover {
     .blog-info {
         float: left;
         max-width: calc(var(--max-blog-info-width) - var(--logo-size));
-        margin-top: calc(var(--logo-size) / 2 - var(--h1-size));
+        text-align: left;
+    }
+
+    .menu-items,
+    .widget-title,
+    .tagcloud,
+    .textwidget,
+    .widget li {
         text-align: left;
     }
 
@@ -326,12 +352,12 @@ a:hover {
         float: none;
     }
 
-    .menu-items,
-    .widget-title,
-    .tagcloud,
-    .textwidget,
-    .widget li {
-        text-align: left;
+    .sidebar-menu, .sidebar {
+        max-width: var(--max-sidebar-width);
+        margin-left: auto;
+        margin-right: auto;
+        clear: both;
+        float: none;
     }
 }
 

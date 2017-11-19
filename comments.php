@@ -18,8 +18,12 @@ if ( post_password_required() )
         </ul>
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <nav role="navigation" class="comments-navigation">
-                <div class="comments-navigation-left"><?php next_comments_link( __( 'Newer Comments', 'espresso-programmer' ) ); ?></div>
-                <div class="comments-navigation-right"><?php previous_comments_link( __( 'Older Comments', 'espresso-programmer' ) ); ?></div>
+                <div class="comments-navigation-left">
+                    <?php previous_comments_link( __( 'Older Comments', 'espresso-programmer' ) ); ?>
+                </div>
+                <div class="comments-navigation-right">
+                    <?php next_comments_link( __( 'Newer Comments', 'espresso-programmer' ) ); ?>
+                </div>
             </nav>
         <?php endif; ?>
 

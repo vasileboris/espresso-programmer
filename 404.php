@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php get_sidebar('menu'); ?>
+
 <section class="posts" role="main">
     <article role="article" class="post">
         <header class="post-info">
@@ -15,5 +17,6 @@
     </article>
 </section>
 
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
