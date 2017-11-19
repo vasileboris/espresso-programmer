@@ -109,6 +109,7 @@ a:hover {
 }
 
 .posts {
+    width: 100%;
     max-width: var(--max-content-width);
     margin: var(--grid-elements-margin);
     float: right;
@@ -176,7 +177,8 @@ a:hover {
 .widget.widget_top-posts,
 .widget.widget_categories,
 .widget.widget_tag_cloud,
-.widget.widget_search {
+.widget.widget_search,
+.posts-search {
     border: var(--border);
     border-radius: var(--border-radius);
 }
