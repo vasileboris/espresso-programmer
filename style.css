@@ -124,6 +124,7 @@ blockquote {
 }
 
 .sidebar-menu {
+    width: 100%;
     max-width: var(--max-sidebar-width);
     margin: var(--grid-elements-margin);
     clear: both;
@@ -131,6 +132,7 @@ blockquote {
 }
 
 .sidebar {
+    width: 100%;
     max-width: var(--max-sidebar-width);
     margin: var(--grid-elements-margin);
     float: left;
