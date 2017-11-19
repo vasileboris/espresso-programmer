@@ -1,52 +1,63 @@
 <?php
 
-/**
- * Enable css stylesheet
- */
-function espresso_programmer_stylesheet() {
-    wp_enqueue_style( 'espresso-programmer-style', get_stylesheet_uri(),
-        array( 'normalize', 'open-sans-google-font', 'source-code-pro-google-font' ) );
-    wp_enqueue_style( 'normalize', get_stylesheet_directory_uri() . '/normalize.css' );
-    wp_enqueue_style( 'open-sans-google-font', 'https://fonts.googleapis.com/css?family=Open+Sans' );
-    wp_enqueue_style( 'source-code-pro-google-font', 'https://fonts.googleapis.com/css?family=Source+Code+Pro' );
-}
+if ( !function_exists( 'espresso_programmer_setup' ) ) :
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * @since Espresso Programmer 1.0
+     */
+    function espresso_programmer_setup() {
+
+        add_theme_support( 'post-thumbnails' );
+
+        /*
+         * Add custom thumbnail size for use with featured images
+         */
+        add_image_size( 'espresso_programmer_post_thumbnail', 700, 700 );
+
+
+        register_nav_menus(
+            array(
+                'primary' => __( 'Primary menu', 'espresso-programmer' )
+            )
+        );
+
+        /*
+         * Enable custom header image
+         */
+        $defaults = array(
+            'default-image'          => '',
+            'width'                  => 100,
+            'height'                 => 100,
+            'flex-width'             => true,
+            'flex-height'            => true,
+            'uploads'                => true,
+            'random-default'         => false,
+            'header-text'            => false,
+            'default-text-color'     => '',
+            'wp-head-callback'       => '',
+            'admin-head-callback'    => '',
+            'admin-preview-callback' => '',
+        );
+        add_theme_support( 'custom-header', $defaults );
+
+    }
+endif;
+add_action( 'after_setup_theme', 'espresso_programmer_setup' );
+
+if ( !function_exists( 'espresso_programmer_stylesheet' ) ) :
+    /**
+     * Enable css stylesheet
+     */
+    function espresso_programmer_stylesheet() {
+        wp_enqueue_style( 'espresso-programmer-style', get_stylesheet_uri(),
+            array( 'normalize', 'open-sans-google-font', 'source-code-pro-google-font' ) );
+        wp_enqueue_style( 'normalize', get_stylesheet_directory_uri() . '/normalize.css' );
+        wp_enqueue_style( 'open-sans-google-font', 'https://fonts.googleapis.com/css?family=Open+Sans' );
+        wp_enqueue_style( 'source-code-pro-google-font', 'https://fonts.googleapis.com/css?family=Source+Code+Pro' );
+    }
+endif;
 add_action( 'wp_enqueue_scripts', 'espresso_programmer_stylesheet' );
-
-/**
- * Enable custom header image
- */
-function espresso_programmer_custom_header_setup() {
-    $defaults = array(
-        'default-image'          => '',
-        'width'                  => 100,
-        'height'                 => 100,
-        'flex-width'             => true,
-        'flex-height'            => true,
-        'uploads'                => true,
-        'random-default'         => false,
-        'header-text'            => false,
-        'default-text-color'     => '',
-        'wp-head-callback'       => '',
-        'admin-head-callback'    => '',
-        'admin-preview-callback' => '',
-    );
-    add_theme_support( 'custom-header', $defaults );
-
-}
-add_action( 'after_setup_theme', 'espresso_programmer_custom_header_setup' );
-
-/**
- * Enable custom primary menu
- */
-function espresso_programmer_navigation_setup() {
-    register_nav_menus(
-        array(
-            'primary' => 'Primary menu'
-        )
-    );
-
-}
-add_action( 'after_setup_theme', 'espresso_programmer_navigation_setup' );
 
 /**
  * @return Menu item css classes

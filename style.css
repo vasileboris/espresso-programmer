@@ -234,6 +234,11 @@ a:hover {
     float: right;
 }
 
+.post-image {
+    width: 100%;
+    height: auto;
+}
+
 .post-time {
     color: var(--grey);
 }
