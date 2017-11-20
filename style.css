@@ -114,6 +114,8 @@ blockquote {
 .header {
     max-width: var(--max-page-width);
     margin: var(--grid-elements-margin);
+    float:left;
+    width: 100%;
 }
 
 .posts {
