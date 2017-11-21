@@ -17,7 +17,7 @@ if ( post_password_required() )
             <?php wp_list_comments( array( 'type' => 'comment', 'style' => 'ul' ) ); ?>
         </ul>
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-            <nav role="navigation" class="comments-navigation">
+            <nav class="comments-navigation" role="navigation">
                 <div class="comments-navigation-left">
                     <?php previous_comments_link( __( 'Older Comments', 'espresso-programmer' ) ); ?>
                 </div>

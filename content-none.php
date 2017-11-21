@@ -8,12 +8,12 @@
  */
 ?>
 
-<article role="article" class="post">
+<article class="post" role="article">
     <header class="class="post-info">
         <h1><?php _e( 'Nothing Found', 'espresso-programmer' ); ?></h1>
     </header>
 
-    <div itemprop="articleBody" class="post-content">
+    <div class="post-content" itemprop="articleBody">
         <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
             <p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'espresso-programmer' ), admin_url( 'post-new.php' ) ); ?></p>
         <?php elseif ( is_search() ) : ?>

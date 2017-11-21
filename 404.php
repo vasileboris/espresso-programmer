@@ -3,11 +3,11 @@
 <?php get_sidebar('menu'); ?>
 
 <div class="posts" role="main">
-    <article role="article" class="post">
+    <article class="post" role="article">
         <header class="post-info">
             <h1><?php _e( 'Not Found', 'espresso-programmer' ); ?></h1>
         </header>
-        <div itemprop="articleBody" class="post-content">
+        <div class="post-content" itemprop="articleBody">
             <h2><?php _e( 'This is somewhat embarrassing, isn’t it?', 'espresso-programmer' ); ?></h2>
             <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'espresso-programmer' ); ?></p>
             <div class="posts-search">

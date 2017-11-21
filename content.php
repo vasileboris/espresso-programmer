@@ -1,4 +1,4 @@
-<article role="article" itemscope itemtype="http://schema.org/Article" class="post">
+<article class="post" role="article" itemscope itemtype="http://schema.org/Article">
     <header class="post-info">
         <h1>
             <?php if ( is_single() || is_page() ) : ?>
@@ -10,15 +10,15 @@
             <?php endif; ?>
         </h1>
         <?php if ( !is_page() ) : ?>
-            <div datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished" class="post-time">
+            <time class="post-time"  datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
                 <?php the_time('F j, Y'); ?>
-            </div>
+            </time>
         <?php endif; ?>
     </header>
     <?php if ( has_post_thumbnail() ) : ?>
         <?php the_post_thumbnail( 'espresso_programmer_post_thumbnail', array( 'itemprop' => 'image', "class" => "post-image" ) ); ?>
     <?php endif; ?>
-    <div itemprop="articleBody" class="post-content">
+    <div class="post-content" itemprop="articleBody">
         <?php the_content(); ?>
     </div>
 </article>
