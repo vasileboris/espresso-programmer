@@ -2,7 +2,7 @@
 
 <?php get_sidebar('menu'); ?>
 
-<section class="posts" role="main">
+<div class="posts" role="main">
     <article role="article" class="post">
         <header class="post-info">
             <h1><?php _e( 'Not Found', 'espresso-programmer' ); ?></h1>
@@ -15,7 +15,7 @@
             </div>
         </div>
     </article>
-</section>
+</div>
 
 <?php get_sidebar(); ?>
 

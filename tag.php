@@ -2,10 +2,8 @@
 
 <?php get_sidebar('menu'); ?>
 
-<section class="posts" role="main">
-
+<div class="posts" role="main">
     <?php if ( have_posts() ) : ?>
-
         <header class="post-info">
             <h1><?php printf( __( 'Tag Archives: %s', 'espresso-programmer' ), single_tag_title( '', false ) ); ?></h1>
 
@@ -23,8 +21,7 @@
     <?php else : ?>
         <?php get_template_part( 'content', 'none' ); ?>
     <?php endif; ?>
-
-</section>
+</div>
 
 <?php get_sidebar(); ?>
 
