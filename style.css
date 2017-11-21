@@ -128,19 +128,15 @@ blockquote {
     float: right;
 }
 
-.sidebar-menu {
+.sidebar-menu, .sidebar {
     width: 100%;
     max-width: var(--max-sidebar-width);
     margin: var(--grid-elements-margin);
-    clear: both;
     float: left;
 }
 
-.sidebar {
-    width: 100%;
-    max-width: var(--max-sidebar-width);
-    margin: var(--grid-elements-margin);
-    float: left;
+.sidebar-menu {
+    clear: both;
 }
 
 .blog-header {
@@ -375,8 +371,8 @@ blockquote {
         max-width: var(--max-sidebar-width);
         margin-left: auto;
         margin-right: auto;
-        clear: both;
         float: none;
+        clear: both;
     }
 }
 
