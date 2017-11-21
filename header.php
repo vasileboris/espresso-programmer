@@ -10,9 +10,9 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<div class="page">
+<div id="page">
 
-<header class="header" role="banner">
+<header id="header" role="banner">
     <nav class="blog-header">
         <div class="blog-home">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"

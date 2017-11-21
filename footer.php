@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer id="footer">
     <?php echo espresso_programmer_footer_credits(); ?>
 </footer>
 <!-- main content div -->

@@ -102,21 +102,20 @@ blockquote {
 }
 
 /* Layout */
-
-.header {
+#header {
     max-width: var(--max-page-width);
     margin: var(--grid-elements-margin);
     float:left;
     width: 100%;
 }
 
-.page, .footer {
+#page, #footer {
     max-width: var(--max-page-width);
     margin-left: auto;
     margin-right: auto;
 }
 
-.footer {
+#footer {
     text-align: center;
     clear: both;
 }
@@ -333,12 +332,12 @@ blockquote {
     }
 
     /* Layout */
-    .header {
+    #header {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .page, .footer {
+    #page, #footer {
         padding: 0 var(--elements-padding) 0 var(--elements-padding);
     }
 
