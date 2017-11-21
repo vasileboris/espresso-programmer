@@ -13,6 +13,7 @@ Tags: TODO
 Text Domain: espresso-programmer
 */
 
+/* Base */
 :root {
     --max-page-width: 960px;
     --max-content-width: 700px;
@@ -100,6 +101,15 @@ blockquote {
     border-left: var(--quote-border);
 }
 
+/* Layout */
+
+.header {
+    max-width: var(--max-page-width);
+    margin: var(--grid-elements-margin);
+    float:left;
+    width: 100%;
+}
+
 .page, .footer {
     max-width: var(--max-page-width);
     margin-left: auto;
@@ -111,13 +121,7 @@ blockquote {
     clear: both;
 }
 
-.header {
-    max-width: var(--max-page-width);
-    margin: var(--grid-elements-margin);
-    float:left;
-    width: 100%;
-}
-
+/* Module */
 .posts {
     width: 100%;
     max-width: var(--max-content-width);
@@ -320,6 +324,7 @@ blockquote {
 }
 
 @media only screen and (max-width: 991px) {
+    /* Base */
     :root {
         --max-page-width: 940px;
         --max-sidebar-width: 940px;
@@ -327,15 +332,17 @@ blockquote {
         --max-blog-info-width: var(--max-sidebar-width);
     }
 
-    .page, .footer {
-        padding: 0 var(--elements-padding) 0 var(--elements-padding);
-    }
-
+    /* Layout */
     .header {
         margin-left: auto;
         margin-right: auto;
     }
 
+    .page, .footer {
+        padding: 0 var(--elements-padding) 0 var(--elements-padding);
+    }
+
+    /* Module */
     .blog-header {
         float: none;
     }
@@ -375,6 +382,7 @@ blockquote {
 }
 
 @media only screen and (max-width: 480px) {
+    /* Base */
     :root {
         --max-page-width: 460px;
         --max-sidebar-width: 460px;
@@ -382,6 +390,9 @@ blockquote {
         --max-blog-info-width: 300px;
     }
 
+    /* Layout */
+
+    /* Module */
     .blog-info {
         max-width: calc(var(--max-blog-info-width) - var(--logo-size));
         margin-top: 0;
