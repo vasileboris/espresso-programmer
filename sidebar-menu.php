@@ -1,4 +1,4 @@
-<aside class="sidebar-menu" role="complementary">
+<nav class="sidebar-menu" role="menu">
     <?php wp_nav_menu(
         array(
             'theme_location' => 'primary',
@@ -9,4 +9,4 @@
             'menu_class'      => 'menu-items',
             'depth' => 1
         )); ?>
-</aside>
+</nav>

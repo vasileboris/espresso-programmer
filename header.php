@@ -12,8 +12,8 @@
 <body>
 <div class="page">
 
-<header role="banner" class="header">
-    <div class="blog-header">
+<header class="header" role="banner">
+    <nav class="blog-header">
         <div class="blog-home">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                title="<?php echo esc_attr( bloginfo( 'name' ) ); ?>"
@@ -31,5 +31,5 @@
             </div>
             <div class="blog-description"><?php bloginfo( 'description' ); ?></div>
         </div>
-    </div>
+    </nav>
 </header>
