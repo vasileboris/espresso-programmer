@@ -158,7 +158,7 @@ blockquote {
 
 .blog-info {
     max-width: var(--max-blog-info-width);
-    margin-top: calc(var(--logo-size) / 2 - var(--h1-size));
+    margin-top: calc(var(--logo-size) / 2 - var(--h1-size) + var(--elements-margin));
     text-align: left;
     float: left;
 }
