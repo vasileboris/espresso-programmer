@@ -16,9 +16,11 @@ Text Domain: espresso-programmer
 /* Base */
 :root {
     --max-page-width: 960px;
+    --max-header-width: 940px;
     --max-content-width: 700px;
     --max-sidebar-width: 220px;
-    --max-blog-info-width: var(--max-page-width);
+    --max-footer-width: 940px;
+    --max-blog-info-width: var(--max-header-width);
     --grid-elements-margin: 10px;
     --elements-margin: 5px;
     --elements-padding: 5px;
@@ -102,20 +104,23 @@ blockquote {
 }
 
 /* Layout */
-#header {
-    max-width: var(--max-page-width);
-    margin: var(--grid-elements-margin);
-    float:left;
-    width: 100%;
-}
-
-#page, #footer {
+#page {
     max-width: var(--max-page-width);
     margin-left: auto;
     margin-right: auto;
 }
 
+#header {
+    max-width: var(--max-header-width);
+    margin: var(--grid-elements-margin);
+    float:left;
+    width: 100%;
+}
+
 #footer {
+    max-width: var(--max-footer-width);
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     clear: both;
 }
@@ -128,15 +133,11 @@ blockquote {
     float: right;
 }
 
-.sidebar-menu, .sidebar {
+.menu, .sidebar {
     width: 100%;
     max-width: var(--max-sidebar-width);
     margin: var(--grid-elements-margin);
     float: left;
-}
-
-.sidebar-menu {
-    clear: both;
 }
 
 .blog-header {
@@ -172,11 +173,6 @@ blockquote {
 
 .blog-description {
     margin-top: var(--elements-margin);
-}
-
-.menu {
-    clear: both;
-    margin: var(--elements-margin) 0;
 }
 
 .menu-items {
@@ -321,20 +317,22 @@ blockquote {
 @media only screen and (max-width: 991px) {
     /* Base */
     :root {
-        --max-page-width: 940px;
+        --max-page-width: 960px;
+        --max-header-width: 940px;
         --max-sidebar-width: 940px;
         --max-content-width: 940px;
+        --max-footer-width: 940px;
         --max-blog-info-width: var(--max-sidebar-width);
     }
 
     /* Layout */
+    #page {
+        padding: 0 var(--elements-padding) 0 var(--elements-padding);
+    }
+
     #header {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    #page, #footer {
-        padding: 0 var(--elements-padding) 0 var(--elements-padding);
     }
 
     /* Module */
@@ -367,7 +365,7 @@ blockquote {
         float: none;
     }
 
-    .sidebar-menu, .sidebar {
+    .menu, .sidebar {
         max-width: var(--max-sidebar-width);
         margin-left: auto;
         margin-right: auto;
@@ -379,9 +377,11 @@ blockquote {
 @media only screen and (max-width: 480px) {
     /* Base */
     :root {
-        --max-page-width: 460px;
+        --max-page-width: 480px;
+        --max-header-width: 460px;
         --max-sidebar-width: 460px;
         --max-content-width: 460px;
+        --max-footer-width: 460px;
         --max-blog-info-width: 300px;
     }
 
