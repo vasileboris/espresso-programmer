@@ -50,9 +50,14 @@ if ( !function_exists( 'espresso_programmer_stylesheet' ) ) :
      * Enable css stylesheet
      */
     function espresso_programmer_stylesheet() {
-        wp_enqueue_style( 'espresso-programmer-style', get_stylesheet_uri(),
-            array( 'normalize', 'open-sans-google-font', 'source-code-pro-google-font' ) );
-        wp_enqueue_style( 'normalize', get_stylesheet_directory_uri() . '/normalize.css' );
+        wp_enqueue_style( 'espresso-programmer-style',
+            get_stylesheet_uri(),
+            array( 'normalize', 'open-sans-google-font', 'source-code-pro-google-font' ),
+            espresso_programmer_css_version( get_stylesheet_directory() . '/style.css' ) );
+        wp_enqueue_style( 'normalize',
+            get_stylesheet_directory_uri() . '/normalize.css',
+            array(),
+            espresso_programmer_css_version( get_stylesheet_directory() . '/normalize.css' ) );
         wp_enqueue_style( 'open-sans-google-font', 'https://fonts.googleapis.com/css?family=Open+Sans' );
         wp_enqueue_style( 'source-code-pro-google-font', 'https://fonts.googleapis.com/css?family=Source+Code+Pro' );
     }
@@ -110,6 +115,10 @@ function espresso_programmer_word_press_link() {
         'http://wordpress.org/',
         'WordPress is open source software you can use to create a beautiful website, blog, or app.',
         'WordPress');
+}
+
+function espresso_programmer_css_version($css) {
+    return get_bloginfo('version') . '-' . filemtime( $css );
 }
 
 ?>
