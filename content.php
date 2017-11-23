@@ -11,7 +11,7 @@
         </h1>
         <?php if ( !is_page() ) : ?>
             <time class="post-time"  datetime="<?php the_time('Y-m-d'); ?>" itemprop="datePublished">
-                <?php the_time('F j, Y'); ?>
+                <?php the_date(); ?>
             </time>
         <?php endif; ?>
     </header>

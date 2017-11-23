@@ -82,14 +82,18 @@ h5 {
     font-size: var(--h5-size);
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
     font-family: 'Source Code Pro', monospace;
     font-size: var(--font-size);
     background: #eee;
     word-wrap: break-word;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
     text-decoration: none;
 }
 
@@ -133,7 +137,8 @@ blockquote {
     float: right;
 }
 
-.menu, .sidebar {
+.menu,
+.sidebar {
     width: 100%;
     max-width: var(--max-sidebar-width);
     margin: var(--grid-elements-margin);
@@ -148,7 +153,8 @@ blockquote {
     float: left;
 }
 
-.blog-name a:link, .blog-name a:visited {
+.blog-name > a:link,
+.blog-name > a:visited {
     color: black;
 }
 
@@ -185,7 +191,8 @@ blockquote {
     margin: var(--elements-margin) 0;
 }
 
-.search-label, .search-submit {
+.search-label,
+.search-submit {
     display: none;
 }
 
@@ -208,7 +215,8 @@ blockquote {
     border-radius: var(--border-radius);
 }
 
-.widget, .posts-search {
+.widget,
+.posts-search {
     margin: var(--elements-margin) 0;
     padding: var(--elements-padding);
 }
@@ -219,8 +227,10 @@ blockquote {
     margin: 0;
 }
 
-.menu ul, .menu ol,
-.widget ul, .widget ol {
+.menu > ul,
+.menu > ol,
+.widget > ul,
+.widget > ol {
     margin: var(--elements-margin) 0;
     padding: 0;
 }
@@ -240,23 +250,27 @@ blockquote {
     text-align: right;
 }
 
-.textwidget p {
+.textwidget > p {
     margin: 0;
 }
 
-.posts-navigation-left, .posts-navigation-right,
-.comments-navigation-left, .comments-navigation-right {
+.posts-navigation-left,
+.posts-navigation-right,
+.comments-navigation-left,
+.comments-navigation-right {
     text-transform: lowercase;
     width: 50%;
     margin-bottom: var(--grid-elements-margin);
 }
 
-.posts-navigation-left, .comments-navigation-left {
+.posts-navigation-left,
+.comments-navigation-left {
     text-align: left;
     float: left;
 }
 
-.posts-navigation-right, .comments-navigation-right {
+.posts-navigation-right,
+.comments-navigation-right {
     text-align: right;
     float: right;
 }
@@ -290,27 +304,41 @@ blockquote {
     list-style-type: none;
     margin: var(--elements-margin) 0;
     padding: var(--elements-padding) 0;
-    border-bottom: var(--light-border);
 }
 
 .comment-author {
     float: left;
 }
 
-.comment-meta {
-    text-align: right;
-}
-
-.comment p {
-    clear: both;
-    padding: var(--elements-padding);
-}
-
-.says {
+.comment-author > .says {
     display: none;
 }
 
+.comment-meta {
+    float: right;
+    text-align: right;
+}
+
+.comment-meta > a {
+    color: var(--grey);
+}
+
+.comment-body > p {
+    float: left;
+    width: 100%;
+    padding: var(--elements-padding) 0;
+}
+
 .comment-respond {
+    clear: both;
+}
+
+.reply {
+    clear: both;
+    border-bottom: var(--border);
+}
+
+.children {
     clear: both;
 }
 
@@ -365,7 +393,8 @@ blockquote {
         float: none;
     }
 
-    .menu, .sidebar {
+    .menu,
+    .sidebar {
         max-width: var(--max-sidebar-width);
         margin-left: auto;
         margin-right: auto;
@@ -391,5 +420,11 @@ blockquote {
     .blog-info {
         max-width: calc(var(--max-blog-info-width) - var(--logo-size));
         margin-top: 0;
+    }
+
+    .comment-meta {
+        margin-top: var(--elements-margin);
+        float: left;
+        text-align: left;
     }
 }
