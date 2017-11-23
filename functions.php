@@ -117,8 +117,12 @@ function espresso_programmer_word_press_link() {
         'WordPress');
 }
 
+/**
+ * @param $css Full path to css file
+ * @return string Css file version based on wordpress version and last file update time
+ */
 function espresso_programmer_css_version($css) {
-    return get_bloginfo('version') . '-' . filemtime( $css );
+    return get_bloginfo( 'version' ) . '-' . filemtime( $css );
 }
 
 ?>
