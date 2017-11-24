@@ -1,4 +1,13 @@
-<?php if ( is_single() ) : ?>
+<?php
+/**
+ * The template used to navigate between posts
+ *
+ * @package WordPress
+ * @subpackage Espresso_Programmer
+ * @since Espresso Programmer 1.0
+ */
+
+if ( is_single() ) : ?>
     <nav class="posts-navigation">
         <div class="posts-navigation-left">
             <?php if( get_previous_post_link() ) : ?>

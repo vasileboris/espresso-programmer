@@ -1,3 +1,14 @@
+<?php
+/**
+ * The Header template for our theme
+ *
+ * Displays all of the <head> section and everything up till <div id="posts">
+ *
+ * @package WordPress
+ * @subpackage Espresso_Programmer
+ * @since Espresso Programmer 1.0
+ */
+?>
 <!DOCTYPE html>
 <html>
 <head>

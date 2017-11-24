@@ -1,3 +1,15 @@
+<?php
+/**
+ * The default template for displaying content
+ *
+ * Used for both posts and pages.
+ *
+ * @package WordPress
+ * @subpackage Espresso_Programmer
+ * @since Espresso Programmer 1.0
+ */
+?>
+
 <article class="post" role="article" itemscope itemtype="http://schema.org/Article">
     <header class="post-info">
         <h1>

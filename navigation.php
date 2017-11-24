@@ -1,4 +1,13 @@
-<?php if ( !(is_single() || is_page()) ) : ?>
+<?php
+/**
+ * The template used to navigate between main loop pages
+ *
+ * @package WordPress
+ * @subpackage Espresso_Programmer
+ * @since Espresso Programmer 1.0
+ */
+
+if ( !(is_single() || is_page()) ) : ?>
     <nav class="posts-navigation">
         <div class="posts-navigation-left">
             <?php if( get_next_posts_link() ) :

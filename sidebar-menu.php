@@ -1,4 +1,15 @@
-<?php wp_nav_menu(
+<?php
+/**
+ * The sidebar containing the pages menu area
+ *
+ * Displays on posts and pages.
+ *
+ * @package WordPress
+ * @subpackage Espresso_Programmer
+ * @since Espresso Programmer 1.0
+ */
+
+wp_nav_menu(
     array(
         'theme_location' => 'primary',
         'container'       => 'nav',
