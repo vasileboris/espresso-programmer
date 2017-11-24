@@ -11,8 +11,8 @@
  * @since Espresso Programmer 1.0
  */
 
-if ( is_active_sidebar( 'espresso_programmer_right' ) ) : ?>
+if ( is_active_sidebar( 'espresso_programmer_sidebar_main' ) ) : ?>
     <nav class="sidebar" role="menu">
-        <?php dynamic_sidebar( 'espresso_programmer_right' ); ?>
+        <?php dynamic_sidebar( 'espresso_programmer_sidebar_main' ); ?>
     </nav>
 <?php endif; ?>

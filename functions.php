@@ -85,7 +85,7 @@ function espresso_programmer_widgets_init() {
 
     register_sidebar( array(
         'name'          => 'Right sidebar',
-        'id'            => 'espresso_programmer_right',
+        'id'            => 'espresso_programmer_sidebar_main',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
