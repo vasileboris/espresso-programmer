@@ -48,6 +48,8 @@ add_action( 'after_setup_theme', 'espresso_programmer_setup' );
 if ( !function_exists( 'espresso_programmer_stylesheet' ) ) :
     /**
      * Enable css stylesheet
+     *
+     * @since Espresso Programmer 1.0
      */
     function espresso_programmer_stylesheet() {
         wp_enqueue_style( 'espresso-programmer-style',
@@ -66,6 +68,8 @@ add_action( 'wp_enqueue_scripts', 'espresso_programmer_stylesheet' );
 
 /**
  * @return Menu item css classes
+ *
+ * @since Espresso Programmer 1.0
  */
 function espresso_programmer_primary_menu_item_classes() {
     return ['menu-item'];
@@ -75,6 +79,7 @@ add_filter( 'nav_menu_css_class', 'espresso_programmer_primary_menu_item_classes
 /**
  * Register our sidebars and widgetized areas.
  *
+ * @since Espresso Programmer 1.0
  */
 function espresso_programmer_widgets_init() {
 
@@ -92,6 +97,8 @@ add_action( 'widgets_init', 'espresso_programmer_widgets_init' );
 
 /**
  * @return Current theme and WordPress credit links
+ *
+ * @since Espresso Programmer 1.0
  */
 function espresso_programmer_footer_credits() {
     return sprintf( '%1$s empowered by %2$s', espresso_programmer_link(), espresso_programmer_word_press_link());
@@ -99,6 +106,8 @@ function espresso_programmer_footer_credits() {
 
 /**
  * @return Current theme credit link
+ *
+ * @since Espresso Programmer 1.0
  */
 function espresso_programmer_link() {
     return sprintf( '<a href="%1$s" rel="designer" title="%2$s">%3$s</a>',
@@ -109,6 +118,8 @@ function espresso_programmer_link() {
 
 /**
  * @return WordPress credit link
+ *
+ * @since Espresso Programmer 1.0
  */
 function espresso_programmer_word_press_link() {
     return sprintf('<a href="%1$s" rel="generator" title="%2$s">%3$s</a>',
@@ -120,6 +131,8 @@ function espresso_programmer_word_press_link() {
 /**
  * @param $css Full path to css file
  * @return string Css file version based on wordpress version and last file update time
+ *
+ * @since Espresso Programmer 1.0
  */
 function espresso_programmer_css_version($css) {
     return get_bloginfo( 'version' ) . '-' . filemtime( $css );
