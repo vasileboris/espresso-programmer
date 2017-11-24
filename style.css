@@ -206,6 +206,12 @@ blockquote {
     outline: none;
 }
 
+.widget,
+.posts-search {
+    margin: var(--elements-margin) 0;
+    padding: var(--elements-padding);
+}
+
 .widget.widget_top-posts,
 .widget.widget_categories,
 .widget.widget_tag_cloud,
@@ -215,9 +221,15 @@ blockquote {
     border-radius: var(--border-radius);
 }
 
-.widget,
-.posts-search {
+.widget.widget_categories label[for="cat"] {
+    display: none;
+}
+
+.widget.widget_categories #cat {
+    width: 100%;
     margin: var(--elements-margin) 0;
+    border: none;
+    background-color: var(--light-grey);
     padding: var(--elements-padding);
 }
 
