@@ -12,7 +12,7 @@
  */
 
 if ( is_active_sidebar( 'espresso_programmer_sidebar_main' ) ) : ?>
-    <nav class="sidebar">
-        <?php dynamic_sidebar( 'espresso_programmer_sidebar_main' ); ?>
-    </nav>
+	<nav class="sidebar">
+		<?php dynamic_sidebar( 'espresso_programmer_sidebar_main' ); ?>
+	</nav>
 <?php endif; ?>
