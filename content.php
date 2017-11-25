@@ -28,7 +28,11 @@
 		<?php endif; ?>
 	</header>
 	<?php if ( has_post_thumbnail() ) : ?>
-		<?php the_post_thumbnail( 'espresso_programmer_post_thumbnail', array( 'itemprop' => 'image', "class" => "post-image" ) ); ?>
+		<?php
+			the_post_thumbnail( 'espresso_programmer_post_thumbnail',
+				array( 'itemprop' => 'image', 'class' => 'post-image' )
+			);
+		?>
 	<?php endif; ?>
 	<div class="post-content" itemprop="articleBody">
 		<?php the_content(); ?>

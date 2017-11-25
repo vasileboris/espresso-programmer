@@ -15,7 +15,6 @@ if ( !function_exists( 'espresso_programmer_setup' ) ) :
 		 */
 		add_image_size( 'espresso_programmer_post_thumbnail', 700, 700 );
 
-
 		register_nav_menus(
 			array(
 				'primary' => __( 'Primary menu', 'espresso-programmer' )
@@ -26,17 +25,17 @@ if ( !function_exists( 'espresso_programmer_setup' ) ) :
 		 * Enable custom header image
 		 */
 		$defaults = array(
-			'default-image'		  => '',
-			'width'				  => 100,
-			'height'				 => 100,
-			'flex-width'			 => true,
-			'flex-height'			=> true,
-			'uploads'				=> true,
-			'random-default'		 => false,
-			'header-text'			=> false,
-			'default-text-color'	 => '',
-			'wp-head-callback'	   => '',
-			'admin-head-callback'	=> '',
+			'default-image'          => '',
+			'width'                  => 100,
+			'height'                 => 100,
+			'flex-width'             => true,
+			'flex-height'            => true,
+			'uploads'                => true,
+			'random-default'         => false,
+			'header-text'            => false,
+			'default-text-color'     => '',
+			'wp-head-callback'       => '',
+			'admin-head-callback'    => '',
 			'admin-preview-callback' => '',
 		);
 		add_theme_support( 'custom-header', $defaults );
@@ -84,8 +83,8 @@ add_filter( 'nav_menu_css_class', 'espresso_programmer_primary_menu_item_classes
 function espresso_programmer_widgets_init() {
 
 	register_sidebar( array(
-		'name'		  => 'Main sidebar',
-		'id'			=> 'espresso_programmer_sidebar_main',
+		'name'          => 'Main sidebar',
+		'id'            => 'espresso_programmer_sidebar_main',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
