@@ -10,7 +10,7 @@
  */
 ?>
 
-<article class="post" role="article" itemscope itemtype="http://schema.org/Article">
+<article class="post" itemscope itemtype="http://schema.org/Article">
     <header class="post-info">
         <h1>
             <?php if ( is_single() || is_page() ) : ?>

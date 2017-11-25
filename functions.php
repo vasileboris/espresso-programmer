@@ -110,7 +110,7 @@ function espresso_programmer_footer_credits() {
  * @since Espresso Programmer 1.0
  */
 function espresso_programmer_link() {
-    return sprintf( '<a href="%1$s" rel="designer" title="%2$s">%3$s</a>',
+    return sprintf( '<a href="%1$s" rel="author" title="%2$s">%3$s</a>',
         esc_url( 'https://espressoprogrammer.com/espresso-programmer-wp-theme' ),
         'Espresso Programmer: A beautiful WordPress theme, for you.',
         'Espresso Programmer');
@@ -122,7 +122,7 @@ function espresso_programmer_link() {
  * @since Espresso Programmer 1.0
  */
 function espresso_programmer_word_press_link() {
-    return sprintf('<a href="%1$s" rel="generator" title="%2$s">%3$s</a>',
+    return sprintf('<a href="%1$s" rel="external" title="%2$s">%3$s</a>',
         'http://wordpress.org/',
         'WordPress is open source software you can use to create a beautiful website, blog, or app.',
         'WordPress');

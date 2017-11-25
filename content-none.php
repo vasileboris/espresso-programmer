@@ -8,7 +8,7 @@
  */
 ?>
 
-<article class="post" role="article">
+<article class="post">
     <header class="class="post-info">
         <h1><?php _e( 'Nothing Found', 'espresso-programmer' ); ?></h1>
     </header>

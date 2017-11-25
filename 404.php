@@ -12,7 +12,7 @@ get_header(); ?>
 <?php get_sidebar('menu'); ?>
 
 <div class="posts" role="main">
-    <article class="post" role="article">
+    <article class="post">
         <header class="post-info">
             <h1><?php _e( 'Not Found', 'espresso-programmer' ); ?></h1>
         </header>

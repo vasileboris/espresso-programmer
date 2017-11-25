@@ -193,7 +193,6 @@ blockquote {
 	margin: var(--elements-margin) 0;
 }
 
-.search-label,
 .search-submit {
 	display: none;
 }
