@@ -92,6 +92,11 @@ var {
 	word-wrap: break-word;
 }
 
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
 a:link,
 a:visited {
 	text-decoration: none;
@@ -213,10 +218,7 @@ blockquote {
 	padding: var(--elements-padding);
 }
 
-.widget.widget_top-posts,
-.widget.widget_categories,
-.widget.widget_tag_cloud,
-.widget.widget_search,
+.widget,
 .posts-search {
 	border: var(--border);
 	border-radius: var(--border-radius);

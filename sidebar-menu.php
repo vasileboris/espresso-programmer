@@ -18,4 +18,5 @@ wp_nav_menu(
 		'menu_id'         => 'menu-primary-items',
 		'menu_class'      => 'menu-items',
 		'depth'           => 1,
+		'fallback_cb'     => false,
 	)); ?>
