@@ -367,6 +367,19 @@ blockquote {
 	clear: both;
 }
 
+/* The following are required but I did not find a usage in my case yet */
+.wp-caption,
+.wp-caption .wp-caption-text,
+.sticky,
+.screen-reader-text,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft,
+.aligncenter {
+
+}
+
 
 @media only screen and (max-width: 991px) {
 	/* Base */
