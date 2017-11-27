@@ -17,11 +17,11 @@ get_header(); ?>
 
 <div class="posts" role="main">
 	<?php if ( have_posts() ) : ?>
-		<header class="post-info">
+		<header class="archive-info">
 			<h1><?php printf( __( 'Tag Archives: %s', 'espresso-programmer' ), single_tag_title( '', false ) ); ?></h1>
 
 			<?php if ( tag_description() ) : // Show an optional tag description ?>
-				<div class="post-info-meta"><?php echo tag_description(); ?></div>
+				<div class="archive-info-meta"><?php echo tag_description(); ?></div>
 			<?php endif; ?>
 		</header>
 

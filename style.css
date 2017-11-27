@@ -304,6 +304,16 @@ blockquote {
 	max-width: 100%;
 }
 
+.post-categories,
+.post-tags {
+	margin: var(--elements-margin) 0;
+}
+
+.post-categories-title,
+.post-tags-title {
+	color: var(--grey);
+}
+
 .comments {
 	clear: both;
 }

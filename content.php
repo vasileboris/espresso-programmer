@@ -37,6 +37,22 @@
 	<div class="post-content" itemprop="articleBody">
 		<?php the_content(); ?>
 	</div>
+
+	<?php if ( is_single() ) : ?>
+		<?php
+			$categories_list = get_the_category_list( __( ', ', 'espresso-programmer' ) );
+			$categories_title = __( 'Categories: ', 'espresso-programmer' );
+			if ( $categories_list ) {
+				echo '<div class="post-categories"><span class="post-categories-title">' . $categories_title . '</span>' . $categories_list . '</div>';
+			}
+
+			$tag_list = get_the_tag_list( '', __( ', ', 'espresso-programmer' ) );
+			$tags_title = __( 'Tags: ', 'espresso-programmer' );
+			if ( $tag_list ) {
+				echo '<div class="post-tags"><span class="post-tags-title">' . $tags_title . '</span>' . $tag_list . '</div>';
+			}
+		?>
+	<?php endif; ?>
 </article>
 
 <?php get_template_part('navigation', 'single'); ?>
