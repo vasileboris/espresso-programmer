@@ -17,7 +17,7 @@ get_header(); ?>
 			<h1><?php _e( 'Not Found', 'espresso-programmer' ); ?></h1>
 		</header>
 		<div class="post-content" itemprop="articleBody">
-			<h2><?php _e( 'This is somewhat embarrassing, isn’t it?', 'espresso-programmer' ); ?></h2>
+			<h2><?php _e( "This is somewhat embarrassing, isn't it?", 'espresso-programmer' ); ?></h2>
 			<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'espresso-programmer' ); ?></p>
 			<div class="posts-search">
 				<?php get_search_form(); ?>

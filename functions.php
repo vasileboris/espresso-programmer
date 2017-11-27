@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ *
+ * @since Espresso Programmer 1.0
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = 700;
+}
+
 if ( !function_exists( 'espresso_programmer_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
