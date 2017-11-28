@@ -54,13 +54,21 @@ if ( !function_exists( 'espresso_programmer_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'espresso_programmer_setup' );
 
-if ( !function_exists( 'espresso_programmer_stylesheet' ) ) :
+if ( !function_exists( 'espresso_programmer_scripts_styles' ) ) :
 	/**
-	 * Enable css stylesheet
+	 * Enable scripts & css stylesheets
 	 *
 	 * @since Espresso Programmer 1.0
 	 */
-	function espresso_programmer_stylesheet() {
+	function espresso_programmer_scripts_styles() {
+		/*
+		 * Adds JavaScript to pages with the comment form to support
+		 * sites with threaded comments (when in use).
+		 */
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script('comment-reply');
+		}
+
 		wp_enqueue_style( 'espresso-programmer-style',
 			get_stylesheet_uri(),
 			array( 'normalize', 'open-sans-google-font', 'source-code-pro-google-font' ),
@@ -73,7 +81,7 @@ if ( !function_exists( 'espresso_programmer_stylesheet' ) ) :
 		wp_enqueue_style( 'source-code-pro-google-font', 'https://fonts.googleapis.com/css?family=Source+Code+Pro' );
 	}
 endif;
-add_action( 'wp_enqueue_scripts', 'espresso_programmer_stylesheet' );
+add_action( 'wp_enqueue_scripts', 'espresso_programmer_scripts_styles' );
 
 /**
  * @return Menu item css classes
