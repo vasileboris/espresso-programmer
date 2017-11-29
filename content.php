@@ -26,33 +26,41 @@
 				<?php the_date(); ?>
 			</time>
 		<?php endif; ?>
-	</header>
-	<?php if ( has_post_thumbnail() ) : ?>
-		<?php
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php
 			the_post_thumbnail( 'espresso_programmer_post_thumbnail',
 				array( 'itemprop' => 'image', 'class' => 'post-image' )
 			);
-		?>
-	<?php endif; ?>
+			?>
+		<?php endif; ?>
+	</header>
+
 	<div class="post-content" itemprop="articleBody">
 		<?php the_content(); ?>
+
+		<?php wp_link_pages(
+			array(
+				'before' => '<div class="post-pagination"><span class="post-pagination-title">' . __( 'Pages:', 'espresso-programmer' ) . '</span>',
+				'after'  => '</div>'
+			)
+		); ?>
 	</div>
 
-	<?php if ( is_single() ) : ?>
-		<?php
-			$categories_list = get_the_category_list( __( ', ', 'espresso-programmer' ) );
-			$categories_title = __( 'Categories: ', 'espresso-programmer' );
-			if ( $categories_list ) {
-				echo '<div class="post-categories"><span class="post-categories-title">' . $categories_title . '</span>' . $categories_list . '</div>';
-			}
+	<?php if ( is_single() ) :
+		echo '<footer class="post-meta">';
+		$categories_list = get_the_category_list( __( ', ', 'espresso-programmer' ) );
+		$categories_title = __( 'Categories: ', 'espresso-programmer' );
+		if ( $categories_list ) {
+			echo '<div class="post-categories"><span class="post-categories-title">' . $categories_title . '</span>' . $categories_list . '</div>';
+		}
 
-			$tag_list = get_the_tag_list( '', __( ', ', 'espresso-programmer' ) );
-			$tags_title = __( 'Tags: ', 'espresso-programmer' );
-			if ( $tag_list ) {
-				echo '<div class="post-tags"><span class="post-tags-title">' . $tags_title . '</span>' . $tag_list . '</div>';
-			}
-		?>
-	<?php endif; ?>
+		$tag_list = get_the_tag_list( '', __( ', ', 'espresso-programmer' ) );
+		$tags_title = __( 'Tags: ', 'espresso-programmer' );
+		if ( $tag_list ) {
+			echo '<div class="post-tags"><span class="post-tags-title">' . $tags_title . '</span>' . $tag_list . '</div>';
+		}
+		echo '</footer>';
+	endif; ?>
 </article>
 
 <?php get_template_part('navigation', 'single'); ?>
