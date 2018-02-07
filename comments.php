@@ -23,7 +23,7 @@ if ( post_password_required() )
 	<?php if ( have_comments() ) : ?>
 		<header class="comments-title">
 			<?php
-			printf( _n( '1 reply', '%1$s replies', get_comments_number(), 'espresso-programmer' ), number_format_i18n( get_comments_number() ) );
+			printf( _n( '%1$d reply', '%1$d replies', get_comments_number(), 'espresso-programmer' ), number_format_i18n( get_comments_number() ) );
 			?>
 		</header>
 
