@@ -6,8 +6,7 @@
  *
  * If no active widgets are in this sidebar, hide it completely.
  *
- * @package WordPress
- * @subpackage Espresso_Programmer
+ * @package Espresso_Programmer
  * @since Espresso Programmer 1.0
  */
 

@@ -2,8 +2,7 @@
 /**
  * The template for displaying a "No posts found" message
  *
- * @package WordPress
- * @subpackage Espresso_Programmer
+ * @package Espresso_Programmer
  * @since Espresso Programmer 1.0
  */
 ?>

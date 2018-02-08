@@ -4,8 +4,7 @@
  *
  * Displays on posts and pages.
  *
- * @package WordPress
- * @subpackage Espresso_Programmer
+ * @package Espresso_Programmer
  * @since Espresso Programmer 1.0
  */
 

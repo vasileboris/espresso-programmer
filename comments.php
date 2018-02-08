@@ -4,8 +4,7 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @package WordPress
- * @subpackage Espresso_Programmer
+ * @package Espresso_Programmer
  * @since Espresso Programmer 1.0
  */
 

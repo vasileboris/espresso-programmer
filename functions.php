@@ -3,6 +3,7 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
+ * @package Espresso_Programmer
  * @since Espresso Programmer 1.0
  */
 if ( ! isset( $content_width ) ) {
