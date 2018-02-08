@@ -15,11 +15,8 @@ get_header(); ?>
 <div class="posts" role="main">
 	<?php if ( have_posts() ) : ?>
 		<header class="archive-info">
-			<h1><?php printf( __( 'Category Archives: %s', 'espresso-programmer' ), single_cat_title( '', false ) ); ?></h1>
-
-			<?php if ( category_description() ) : // Show an optional category description ?>
-				<div class="archive-info-meta"><?php echo category_description(); ?></div>
-			<?php endif; ?>
+			<?php the_archive_title( '<h1>', '</h1>'); ?>
+			<?php the_archive_description( '<div class="archive-info-meta">', '</div>'); ?>
 		</header>
 
 		<?php while ( have_posts() ) : the_post(); ?>
