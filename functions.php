@@ -104,7 +104,7 @@ add_filter( 'nav_menu_css_class', 'espresso_programmer_primary_menu_item_classes
 function espresso_programmer_widgets_init() {
 
 	register_sidebar( array(
-		'name'          => 'Main sidebar',
+		'name'          => __( 'Main sidebar', 'espresso-programmer' ),
 		'id'            => 'espresso_programmer_sidebar_main',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
@@ -121,7 +121,7 @@ add_action( 'widgets_init', 'espresso_programmer_widgets_init' );
  * @since Espresso Programmer 1.0
  */
 function espresso_programmer_footer_credits() {
-	return sprintf( '%1$s empowered by %2$s', espresso_programmer_link(), espresso_programmer_word_press_link());
+	return sprintf( __( '%1$s empowered by %2$s', 'espresso-programmer' ), espresso_programmer_link(), espresso_programmer_word_press_link());
 }
 
 /**
@@ -132,8 +132,8 @@ function espresso_programmer_footer_credits() {
 function espresso_programmer_link() {
 	return sprintf( '<a href="%1$s" rel="author" title="%2$s">%3$s</a>',
 		esc_url( 'https://espressoprogrammer.com/espresso-programmer-wp-theme' ),
-		'Espresso Programmer: A beautiful WordPress theme, for you.',
-		'Espresso Programmer');
+		__( 'Espresso Programmer', 'espresso-programmer' ),
+		__( 'Espresso Programmer', 'espresso-programmer' ) );
 }
 
 /**
@@ -142,10 +142,10 @@ function espresso_programmer_link() {
  * @since Espresso Programmer 1.0
  */
 function espresso_programmer_word_press_link() {
-	return sprintf('<a href="%1$s" rel="external" title="%2$s">%3$s</a>',
-		'http://wordpress.org/',
-		'WordPress is open source software you can use to create a beautiful website, blog, or app.',
-		'WordPress');
+	return sprintf( '<a href="%1$s" rel="external" title="%2$s">%3$s</a>',
+		esc_url( __( 'https://wordpress.org/', 'espresso-programmer' ) ),
+		__( 'WordPress is open source software you can use to create a beautiful website, blog, or app.', 'espresso-programmer' ),
+		__( 'WordPress', 'espresso-programmer' ) );
 }
 
 /**
@@ -157,5 +157,3 @@ function espresso_programmer_word_press_link() {
 function espresso_programmer_css_version($css) {
 	return get_bloginfo( 'version' ) . '-' . filemtime( $css );
 }
-
-?>
