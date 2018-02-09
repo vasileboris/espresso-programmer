@@ -92,7 +92,7 @@ add_action( 'wp_enqueue_scripts', 'espresso_programmer_scripts_styles' );
  * @since Espresso Programmer 1.0
  */
 function espresso_programmer_primary_menu_item_classes() {
-	return ['menu-item'];
+	return array( 'menu-item' );
 }
 add_filter( 'nav_menu_css_class', 'espresso_programmer_primary_menu_item_classes', 10, 0);
 

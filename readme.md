@@ -3,7 +3,7 @@
 **Contributors:** vasileboris  
 **Requires at least:** WordPress 4.9  
 **Tested up to:** WordPress 4.9  
-**Version:** 1.1  
+**Version:** 1.2  
 **License:** GNU GPLv3  
 **License URI:** http://www.gnu.org/copyleft/gpl.html  
 **Tags:** two-columns, left-sidebar, grid-layout, custom-header, custom-menu, featured-images, blog
@@ -35,5 +35,5 @@ Source: [coffee-brown-about-symbols][coffee-brown-about-symbols]
 
 ## Changelog
 
-### 1.0
+### 1.2
 Released: February, 2018
