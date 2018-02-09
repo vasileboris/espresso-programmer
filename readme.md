@@ -3,7 +3,7 @@
 **Contributors:** vasileboris  
 **Requires at least:** WordPress 4.9  
 **Tested up to:** WordPress 4.9  
-**Version:** 1.0  
+**Version:** 1.1  
 **License:** GNU GPLv3  
 **License URI:** http://www.gnu.org/copyleft/gpl.html  
 **Tags:** two-columns, left-sidebar, grid-layout, custom-header, custom-menu, featured-images, blog
